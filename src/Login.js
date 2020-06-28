@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, TextInput, Image, Dimensions, TouchableOpacity} from 'react-native';
 import chatLogo from './../assets/chat-logo.png';
-// import Icons from "react-native-vector-icons/AntDesign";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const {width: WIDTH} = Dimensions.get('window');
 export default class Login extends Component {
@@ -30,8 +30,9 @@ export default class Login extends Component {
             value={this.state.name}
           />
         </View>
-        <View>
-            <TouchableOpacity>
+        <View style={{ alignItems: 'flex-end', marginTop: 50, marginRight: 20 }}>
+            <TouchableOpacity style={styles.iconContainer}>
+            <Icon  name={"arrow-right"} size={30} color={"#fff"} style={styles.Icon} />
             </TouchableOpacity>
         </View>
       </View>
@@ -74,4 +75,16 @@ const styles = StyleSheet.create({
       paddingHorizontal: 20,
       color: "#8A8A8A"
   },
+  iconContainer: {
+      height: 70,
+      backgroundColor: "#9075E3",
+      width: 70,
+      borderRadius: 70 / 2,
+      alignItems: "center",
+      justifyContent: "center"
+  },
+  Icon : {
+      marginBottom: 5
+
+  }
 });
