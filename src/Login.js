@@ -38,7 +38,7 @@ export default class Login extends Component {
           />
         </View>
         <View style={{ alignItems: 'flex-end', marginTop: 50, marginRight: 20 }}>
-            <TouchableOpacity style={styles.iconContainer} onPres={this.continue}>
+            <TouchableOpacity style={styles.iconContainer} onPress={this.continue}>
             <Icon  name={"arrow-right"} size={25} color={"#fff"} style={styles.Icon} />
             </TouchableOpacity>
         </View>
