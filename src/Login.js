@@ -10,6 +10,13 @@ export default class Login extends Component {
     this.state = {
       name: '',
     };
+    this.continue = this.continue.bind(this);
+  }
+
+  continue = () => {
+    this.props.navigation.navigate("ChatScreen", {
+        name: this.state.name
+    })
   }
 
   render() {
@@ -31,7 +38,7 @@ export default class Login extends Component {
           />
         </View>
         <View style={{ alignItems: 'flex-end', marginTop: 50, marginRight: 20 }}>
-            <TouchableOpacity style={styles.iconContainer}>
+            <TouchableOpacity style={styles.iconContainer} onPres={this.continue}>
             <Icon  name={"arrow-right"} size={25} color={"#fff"} style={styles.Icon} />
             </TouchableOpacity>
         </View>
