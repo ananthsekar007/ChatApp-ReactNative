@@ -22,7 +22,7 @@ const App = () =>  {
                 headerShown: false
             }} >
                 <Stack.Screen name="Login" component={LoginScreen} />
-                <Stack.Screen name="ChatScreen" compone={ChatScreen} />
+                <Stack.Screen name="ChatScreen" component={ChatScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );
